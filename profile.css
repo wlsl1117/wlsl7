@@ -1,0 +1,409 @@
+/* ✅ 기본 설정 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Pretendard-Regular', sans-serif;
+  background-color: #042550;
+  color: white;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* ✅ 오른쪽 상단 버튼 고정 */
+.header-buttons {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.header-buttons button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.header-buttons button:hover {
+  background-color: white;
+  color: #042550;
+}
+
+/* 🔹 프로필 컨테이너: 정중앙 배치 */
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+  height: 100vh;
+  margin: 0 auto;
+  gap: 40px;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 40px;
+  min-height: 100vh; /* height 대신 min-height */
+  padding-top: 80px; /* 상단 버튼 피해서 내려오게 */
+}
+
+/* 🔹 왼쪽: 이미지 + 좌우명 */
+.profile-left {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  padding: 1rem;
+}
+
+.profile-img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20%;
+  border: 2px solid white;
+  user-select: none;
+  pointer-events: none;
+}
+
+.motto {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 14px;
+  color: #ddd;
+  margin: 0;
+}
+
+/* 🔹 중앙선 */
+.divider {
+  width: 1.5px;
+  height: 450px;
+  background-color: white;
+  flex-shrink: 0;
+}
+
+/* 🔹 오른쪽 정보 영역 */
+.profile-right {
+  flex: 2;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  line-height: 1.8;
+  padding: 2rem 3rem;
+  box-sizing: border-box;
+  height: auto;
+  word-break: keep-all;
+  /* margin: 8px; */
+}
+
+.profile-right h3 {
+  margin-top: 0rem;  /* 위 간격 */
+  margin-bottom: 0.3rem; /* 아래 간격 */
+}
+
+
+/* .name {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+.name span {
+  font-size: 0.8rem;
+  color: #888;
+} */
+
+/* 리스트 스타일 */
+ul {
+  list-style: none;
+  padding-left: 1.2rem;
+}
+
+ul li::before {
+  content: "- ";
+  color: #ccc;
+}
+
+/* 버튼 공통 스타일 */
+button {
+  margin-top: 1vw;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 80px;
+}
+
+button:hover {
+  background: white;
+  color: black;
+}
+
+/* 🔹 추가 정보: 스크롤 시 등장 */
+.additional-info {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: white;
+  margin-top: 60px;
+}
+
+/* 제목 스타일 */
+.additional-info h2 {
+  font-size: 1.8rem;
+  border-bottom: 2px solid white;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+/* 소제목 영어 */
+.school,
+.Award,
+.activities,
+.training {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-left: 0.5rem;
+}
+
+/* 학년 텍스트 */
+.grade h3 {
+  color: #aaa;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+/* 학기 텍스트 */
+.semester h4 {
+  color: #bbb;
+  font-size: 1.05rem;
+  margin: 0.3rem 0 0.3rem 1rem;
+}
+
+/* 🔹 페이드 인 효과 */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* .profile-right fade-in {
+
+} */
+
+
+
+
+.new-page {
+  height: 100vh; /* 브라우저 높이 100% */
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.centered-content {
+  font-size: 2rem;
+  color: #333;
+}
+
+
+
+/* 전체 섹션 */
+.interview-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* 제목 */
+.interview-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+/* 질문 박스 스타일 */
+.question-box {
+  background-color: #20529d;
+  padding: 25px 30px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  line-height: 1.8;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* 질문 제목 */
+.question-box h2 {
+  font-size: 1.５rem;
+  margin-bottom: 16px;
+}
+
+/* 강조된 텍스트 */
+.highlight {
+  font-weight: bold;
+  color: #facc15; /* 노란색 강조 */
+}
+
+body {
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none
+}
+
+
+/* 스크롤탑 버튼 스타일 */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100;
+  background-color: #fbf0f0;
+  color: rgb(0, 21, 124);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#scrollTopBtn:hover {
+  background-color: #8ca8d1;
+}
+
+
+
+
+/* 📱 반응형 웹 설정 */
+@media (max-width: 1024px) { /* 태블릿 이하 */
+  .container,
+  .profile-container {
+    flex-direction: column; /* 세로 배치 */
+    gap: 20px;
+  }
+
+  .divider {
+    display: none; /* 세로 구분선 제거 */
+  }
+
+  .profile-right {
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+
+  .profile-img {
+    width: 180px;
+    height: 220px;
+  }
+
+  .intro-header,
+  .header-buttons {
+    top: 10px;
+    right: 10px;
+    gap: 6px;
+  }
+
+  .intro-header button,
+  .header-buttons button {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 400px;
+    height: auto; /* 고정 높이 제거 */
+  }
+}
+
+@media (max-width: 600px) { /* 모바일 */
+  .intro-content span {
+    font-size: 1.2rem;
+    line-height: 28px;
+  }
+
+  .intro-content p {
+    font-size: 1rem;
+  }
+
+  .left h1 {
+    font-size: 1.5rem;
+  }
+
+  .left h1 span {
+    font-size: 0.9rem;
+  }
+
+  .profile-img {
+    width: 150px;
+    height: 200px;
+  }
+
+  .motto {
+    font-size: 12px;
+  }
+
+  .profile-right {
+    padding: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .project-list {
+    gap: 20px;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 320px;
+    padding: 20px 16px;
+  }
+
+  .interview-title {
+    font-size: 2rem;
+  }
+
+  .question-box {
+    padding: 15px 20px;
+    font-size: 0.95rem;
+  }
+
+  #scrollTopBtn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    bottom: 20px;
+    right: 20px;
+  }
+}

@@ -1,0 +1,352 @@
+/* ✅ 기본 설정 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Pretendard-Regular', sans-serif;
+  background-color: #042550;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* ✅ 오른쪽 상단 버튼 고정 */
+.intro-header {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.intro-header button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.intro-header button:hover {
+  background-color: white;
+  color: #042550;
+}
+
+/* 🔹 표지 화면 */
+#intro {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.intro-content span {
+  display: inline-block;
+  max-width: 90%;
+  word-break: keep-all; /* 단어 잘림 방지 */
+}
+
+
+.intro-content p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* 🔹 프로필 영역 */
+#main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+/* 🔹 메인 컨테이너 */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* 왼쪽 영역 */
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 450px;
+  justify-content: center;
+}
+
+.left h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.left h1 span {
+  font-size: 1rem;
+  color: #aaa;
+  display: block;
+}
+
+.profile-img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 2px solid white;
+}
+
+/* 구분선 */
+.divider {
+  width: 1.5px;
+  height: 450px;
+  background-color: white;
+  flex-shrink: 0;
+}
+
+/* 오른쪽 영역 */
+.right {
+  max-width: 400px;
+  line-height: 1.8;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right strong {
+  color: white;
+}
+
+/* MORE 버튼 */
+#moreBtn {
+  margin-top: 30px;
+  padding: 8px 16px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 80px;
+}
+
+#moreBtn:hover {
+  background-color: white;
+  color: #042550;
+}
+
+
+/* 🔹 프로젝트 영역 */
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.project-card {
+  background: #fff;
+  color: #093366;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  padding: 30px 22px;
+  width: 320px;
+  height: 300px; /* 고정 높이 */
+  min-height: unset;
+  overflow: auto; /* 내용이 넘치면 스크롤 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  transform: translateY(-6px) scale(1.03);
+}
+
+.project-card h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+  color: #093366;
+}
+
+.project h1 {
+  font-size: 20px;
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  margin-bottom: 18px;
+  color: #333;
+}
+
+.project-btn {
+  align-self: flex-end;
+  padding: 8px 20px;
+  background: #093366;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  transition: background 0.2s, color 0.2s;
+  margin: 0 auto;      /* 중앙 정렬 */
+  display: block;      /* 블록 요소로 변경 */
+}
+
+.project-btn:hover {
+  background: #fff;
+  color: #093366;
+  border: 1px solid #093366;
+}
+
+
+/* 🔹 페이드 인 애니메이션 */
+.fade-in {
+  opacity: 0; /* 처음에는 보이지 않게 설정 */
+  transform: translateY(40px); /* 약간 아래에서 올라오는 효과 */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* 부드럽게 나타나는 효과 */
+}
+
+.fade-in.visible {
+  opacity: 1; /* 보이게 설정 */
+  transform: translateY(0); /* 원래 위치로 돌아오게 */
+}
+
+
+/* 전체 스크롤을 화면 단위로 끊기게 설정 */
+body {
+  scroll-behavior: smooth;
+  /* overflow-y: scroll; */
+}
+
+/* 모든 section이 스크롤 단위가 되도록 설정 */
+section {
+  height: auto; /* 강제 전체 화면 제거 */
+  min-height: 100vh; /* 화면보다 작으면 꽉 차게 */
+  padding: 60px 20px;
+}
+
+
+body {
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none
+}
+
+
+
+
+/* 📱 반응형 웹 설정 */
+@media (max-width: 1024px) { /* 태블릿 이하 */
+  .container,
+  .profile-container {
+    flex-direction: column; /* 세로 배치 */
+    gap: 20px;
+  }
+
+  .divider {
+    display: none; /* 세로 구분선 제거 */
+  }
+
+  .profile-right {
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+
+  .profile-img {
+    width: 180px;
+    height: 220px;
+  }
+
+  .intro-header,
+  .header-buttons {
+    top: 10px;
+    right: 10px;
+    gap: 6px;
+  }
+
+  .intro-header button,
+  .header-buttons button {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 400px;
+    height: auto; /* 고정 높이 제거 */
+  }
+}
+
+@media (max-width: 600px) { /* 모바일 */
+  .intro-content span {
+    font-size: 1.2rem;
+    line-height: 28px;
+  }
+
+  .intro-content p {
+    font-size: 1rem;
+  }
+
+  .left h1 {
+    font-size: 1.5rem;
+  }
+
+  .left h1 span {
+    font-size: 0.9rem;
+  }
+
+  .profile-img {
+    width: 150px;
+    height: 200px;
+  }
+
+  .motto {
+    font-size: 12px;
+  }
+
+  .profile-right {
+    padding: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .project-list {
+    gap: 20px;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 320px;
+    padding: 20px 16px;
+  }
+
+  .interview-title {
+    font-size: 2rem;
+  }
+
+  .question-box {
+    padding: 15px 20px;
+    font-size: 0.95rem;
+  }
+
+   section {
+    min-height: calc(var(--vh, 1vh) * 100);
+  }
+}
+
+.school strong {
+  font-size: 13px;
+}

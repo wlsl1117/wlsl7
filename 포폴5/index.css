@@ -1,0 +1,131 @@
+.pallet button {
+  width: 40px;
+  height: 40px;
+  border-radius: 20%;
+  font-size: 0;
+  border: 2px solid transparent;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button.control-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  gap: 24px;
+}
+
+.pallet {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+aside ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none; /*리스트 앞에 동그라미 제거*/
+}
+
+body {
+    background-color: #384047;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+} 
+
+canvas {
+    background-color: white;
+    border-radius: 10px; /*흰색 둥글게*/
+}
+
+main {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+
+button {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px; /* 버튼 사이 간격 */
+    font-size: 0;
+    border: 2px solid transparent; /* 테두리 투명 */
+    border-radius: 5px;
+}
+
+.pallet button.selected {
+  border: 3px solid #fff;
+  box-sizing: border-box;
+}
+
+button.red {
+    background-color: red;
+}
+
+button.blue {
+    background-color: blue;
+}
+
+button.black {
+    background-color: black;
+}
+
+button.green {
+    background-color: green;
+}
+
+button.control-btn {
+   font-size: 16px;
+}
+
+button.control-btn.selected {
+    color: blue;
+}
+
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    gap: 16px;
+  }
+  aside {
+    flex-direction: row;
+    height: auto;
+  }
+  .pallet {
+    flex-direction: row;
+  }
+}
