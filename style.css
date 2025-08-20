@@ -45,8 +45,9 @@ body {
 
 .intro-content span {
   display: inline-block;
-  max-width: 90%;
+  max-width: 100%;
   word-break: keep-all; /* 단어 잘림 방지 */
+  font-size: 1.5rem;
 }
 
 
@@ -346,4 +347,5 @@ body {
     min-height: calc(var(--vh, 1vh) * 100);
   }
 }
+
 
